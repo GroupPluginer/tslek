@@ -11,7 +11,7 @@ class Main extends PluginBase{
 
  public function onEnable(){
   $this->getServer()->getLogger()->info("config test enabled");
-  @mkdir->($this-<getDatatFolder());
+  @mkdir->($this->getDatatFolder());
   $m = [
    'm' => 'here'
    ];
