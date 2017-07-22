@@ -13,16 +13,15 @@ class Main extends PluginBase{
   $this->getServer()->getLogger()->info("config test enabled");
   @mkdir->($this->getDatatFolder());
   $m = [
-   'm' => 'here'
+   'm' => 'here',
    ];
   $config = new
-   Config($this->getDataFolder()
-          "config.yml", Config::YAML,$m);
+   Config($this->getDataFolder() . "config.yml", Config::YAML,$m);
  }
  public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
   switch($cmd->getName()){
    case 'message':
-    $m = $this->getConfig()->get('m', $m);
+    $m = $this->getConfig()->get("m");
     $sender->sendMessage("$m");
   }
  }
