@@ -15,4 +15,7 @@ class Main extends PluginBase{
   $m = [
    'm' => 'here'
    ];
+  $config = new
+   Config($this->getDataFolder()
+          "config.yml", Config::YAML,$m);
    
