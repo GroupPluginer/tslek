@@ -18,4 +18,13 @@ class Main extends PluginBase{
   $config = new
    Config($this->getDataFolder()
           "config.yml", Config::YAML,$m);
+ }
+ public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+  switch($cmd->getName()){
+   case 'message':
+    $m = $this->getConfig()->get('m', $m);
+    $sender->sendMessage("$m");
+  }
+ }
+}
    
